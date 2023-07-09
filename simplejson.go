@@ -33,6 +33,12 @@ func New() *Json {
 	}
 }
 
+func NewArray() *Json {
+	return &Json{
+		data: make([]interface{}, 0),
+	}
+}
+
 // Interface returns the underlying data
 func (j *Json) Interface() interface{} {
 	return j.data
